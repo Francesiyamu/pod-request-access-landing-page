@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Martian+Mono:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 $font-stack: "Chivo", sans-serif;
-$green-color: #54E6AF;
+/*$green-color: #54E6AF;
 $Blue-950:#121725;
 $Blue-900:#121725;
 $Blue-600:#5A668A;
 $White:#ffff;
-$Red:#FB3E3E;
+$Red:#FB3E3E;*/
+
+$colors : (
+    "green": #54E6AF,
+    "blue-950": #121725,
+    "blue-900": #5A668A,
+    "white": #ffff,
+    "red": #FB3E3E
+);
 
 *,
 *::before,
@@ -22,7 +30,28 @@ html{
 
 body{
     font-family: $font-stack;
+    background-color: map-get($map: $colors, $key:"blue-950");
 }
+
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr min(100%, 18.94rem) 1fr;
+    align-content: center;
+    padding: 1em;
+    
+    .grid-content{
+        grid-column: 2 / 3;
+    }
+    
+
+    .right-flex-box{
+        picture{
+            display: none;
+        }
+    }
+}
+
+
 
 button,input{
     font-family: inherit;
