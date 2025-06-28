@@ -11,7 +11,9 @@ $Red:#FB3E3E;*/
 $colors : (
     "green": #54E6AF,
     "blue-950": #121725,
-    "blue-900": #5A668A,
+    "blue-900": #2C344B,
+    "blue-600": #5A668A,
+    "blue-300": #C2CBE5,
     "white": #ffff,
     "red": #FB3E3E
 );
@@ -38,18 +40,83 @@ body{
     grid-template-columns: 1fr min(100%, 18.94rem) 1fr;
     align-content: center;
     padding: 1em;
-    
+    height: 80vh;
+
     .grid-content{
         grid-column: 2 / 3;
+        
     }
     
+}
+    
+.left-flex-box{
+     figure{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5em;
+        }
+
+
+    .podcast-text-content{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+        .headline{
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: map-get($map: $colors, $key: "green");
+            line-height: 120%;
+            margin-bottom: 1.5em;
+            text-align: center;
+
+            span{
+                color: map-get($map: $colors, $key: "white" );
+            }
+
+        }
+
+        .headline-paragaph{
+             color: map-get($map: $colors, $key: "blue-300");
+             font-size: 0.875;
+             line-height: 150%;
+             font-weight: 100;
+        }
+
+        
+        :nth-child(1){
+            order: 0;
+        }
+       
+         :nth-child(2){
+            order: 1;
+        }  
+       
+        .podcast-options{
+            width: 28%;
+            height: auto;
+            box-sizing: border-box;
+            margin: 0 auto;
+            display: flex;
+            gap: 10px;
+            
+            img{
+                max-width: 100%;
+                display: inline-block;
+            }
+
+        }
+    }
+
+}
+
 
     .right-flex-box{
         picture{
             display: none;
         }
     }
-}
+
 
 
 
@@ -59,7 +126,3 @@ button,input{
     outline: none;
 }
 
-img{
-    max-width: 100%;
-    display: block;
-}
