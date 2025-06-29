@@ -15,7 +15,8 @@ $colors : (
     "blue-600": #5A668A,
     "blue-300": #C2CBE5,
     "white": #ffff,
-    "red": #FB3E3E
+    "red": #FB3E3E,
+    "grey": #1E1E1E
 );
 
 *,
@@ -37,7 +38,7 @@ body{
 
 .main-container{
     display: grid;
-    grid-template-columns: 1fr min(100%, 18.94rem) 1fr;
+    grid-template-columns: 1fr min(100%, 16rem) 1fr;
     align-content: center;
     padding: 1em;
     height: 80vh;
@@ -93,7 +94,7 @@ body{
         }  
        
         .podcast-options{
-            width: 28%;
+            width: 25%;
             height: auto;
             box-sizing: border-box;
             margin: 0 auto;
@@ -106,10 +107,48 @@ body{
             }
 
         }
+
+        .form-details{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            
+          input{
+            font-family: inherit;
+            border: none;
+            outline: none;
+            padding: 1em;
+            border-radius: 50px;
+        }
+        .input-email{
+                background-color: map-get($map: $colors, $key: "grey");
+                
+                &::placeholder{
+                    color: map-get($map: $colors, $key: "white");
+                }
+            }
+
+        input:focus,
+        input:valid{
+            border: 2px solid map-get($map: $colors, $key:"blue-900");
+            outline: none;
+        }
+
+        input:invalid {
+        border: 2px solid map-get($map: $colors, $key:"red");;
+        }
+        .submit-btn{
+            background-color: map-get($map: $colors, $key: "green");
+            font-size: 0.875rem;
+
+            &:hover{
+                background-color: lighten(map-get($map: $colors, $key: "green"), 15%);
+            }
+        }
     }
 
+    }
 }
-
 
     .right-flex-box{
         picture{
@@ -120,9 +159,5 @@ body{
 
 
 
-button,input{
-    font-family: inherit;
-    border: none;
-    outline: none;
-}
+
 
