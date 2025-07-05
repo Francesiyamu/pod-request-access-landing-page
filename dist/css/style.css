@@ -74,6 +74,7 @@ body {
   margin: 0 auto;
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
 .left-flex-box .podcast-text-content .podcast-options img {
   max-width: 100%;
@@ -113,6 +114,86 @@ body {
   background-color: #97f0ce;
 }
 
-.right-flex-box picture {
-  display: none;
+/*.right-flex-box  picture{
+        display: none;
+    } */
+@media screen and (max-width: 380px) {
+  .right-flex-box picture {
+    display: none;
+  }
+}
+@media screen and (min-width: 400px) {
+  .flex-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+  .flex-container .left-flex-box {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+    width: 35em;
+    height: 40.5em;
+  }
+  .flex-container .left-flex-box figure {
+    justify-content: flex-start;
+    margin-bottom: 6em;
+  }
+  .flex-container .left-flex-box .podcast-text-content {
+    background-color: #121725;
+    padding: 1em;
+  }
+  .flex-container .left-flex-box .podcast-text-content .headline {
+    font-size: 3em;
+    line-height: 120%;
+    text-align: start;
+    word-spacing: 20px;
+  }
+  .flex-container .left-flex-box .podcast-text-content .headline-paragaph {
+    font-size: 1.125rem;
+    line-height: 150%;
+    max-width: 25em;
+  }
+  .flex-container .left-flex-box .podcast-text-content .podcast-options {
+    gap: 50px;
+    margin-bottom: 30px;
+  }
+  .flex-container .left-flex-box .podcast-text-content .form-details {
+    position: relative;
+    flex-direction: row;
+  }
+  .flex-container .left-flex-box .podcast-text-content .form-details .input-email {
+    width: 90%;
+  }
+  .flex-container .left-flex-box .podcast-text-content .form-details .submit-btn {
+    position: absolute;
+    right: 3.8em;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    padding: 0 1.5em;
+    cursor: pointer;
+  }
+  .flex-container .left-flex-box :nth-child(3) {
+    order: 2;
+  }
+  .flex-container .right-flex-box {
+    position: relative;
+    top: 10%;
+    right: -45%;
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .flex-container {
+    align-items: stretch;
+  }
+  .flex-container .left-flex-box {
+    height: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
