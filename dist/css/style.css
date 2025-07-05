@@ -91,12 +91,13 @@ body {
   outline: none;
   padding: 1em;
   border-radius: 50px;
+  color: white;
 }
 .left-flex-box .podcast-text-content .form-details .input-email {
   background-color: #1E1E1E;
 }
 .left-flex-box .podcast-text-content .form-details .input-email::placeholder {
-  color: white;
+  color: #5A668A;
 }
 .left-flex-box .podcast-text-content .form-details input:focus,
 .left-flex-box .podcast-text-content .form-details input:valid {
@@ -113,10 +114,13 @@ body {
 .left-flex-box .podcast-text-content .form-details .submit-btn:hover {
   background-color: #97f0ce;
 }
+.left-flex-box .podcast-text-content .form-details .error {
+  color: #FB3E3E;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+}
 
-/*.right-flex-box  picture{
-        display: none;
-    } */
 @media screen and (max-width: 380px) {
   .right-flex-box picture {
     display: none;

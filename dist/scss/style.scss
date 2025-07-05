@@ -99,12 +99,13 @@ body{
             outline: none;
             padding: 1em;
             border-radius: 50px;
+            color: map-get($map: $colors, $key: "white" );
         }
         .input-email{
                 background-color: map-get($map: $colors, $key: "grey");
                 
                 &::placeholder{
-                    color: map-get($map: $colors, $key: "white");
+                    color: map-get($map: $colors, $key: "blue-600");
                 }
             }
 
@@ -125,14 +126,20 @@ body{
                 background-color: lighten(map-get($map: $colors, $key: "green"), 15%);
             }
         }
+
+        .error{
+            color: map-get($map: $colors, $key: "red");
+            position: absolute;
+            top: 100%;
+            left: 0%;
+            //right: 70%;
+        }
     }
 
     }
 }
 
-/*.right-flex-box  picture{
-        display: none;
-    } */
+
 
 
 @import './media-queries';
